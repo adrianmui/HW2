@@ -58,7 +58,7 @@ int Conway::count_alive_neighbors(int x, int y)
     {
         count++;
     }
-    if ((universe[x+1[y-1].get_alive()) == true)
+    if ((universe[x+1][y-1].get_alive()) == true)
     {
         count++;
     }
