@@ -7,7 +7,9 @@ using namespace std;
 
 Conway::Conway(int s) {
 	side = s;// Your code here!
-    Cell ** universe[s][s];
+    int** universe = new Cell*[side];
+    for(int i = 0; i < side; i++)
+        universe[i] = new Cell[side];
 }
 
 Conway::~Conway()
