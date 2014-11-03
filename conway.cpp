@@ -19,10 +19,10 @@ Conway::~Conway()
         
         for (int i = 0; i < side; i++)
         {
-            delete universe[i];
+            delete [] universe[i];
         }
     }
-    delete [] universe;
+    delete universe;
 // Your code here!
 }
 
