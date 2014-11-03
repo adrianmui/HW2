@@ -21,8 +21,8 @@ Conway::~Conway()
         {
             delete [] universe[i];
         }
-        delete [] universe;
     }
+    delete [] universe;
 // Your code here!
 }
 
