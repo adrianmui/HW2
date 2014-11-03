@@ -36,7 +36,7 @@ bool Cell::get_alive()
 void Cell::set_alive(bool a)
 {
 	alive = a;
-    }// Your code here!
+    // Your code here!
 }
 
 RGBAPixel Cell::get_color() {
