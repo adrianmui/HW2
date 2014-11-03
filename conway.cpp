@@ -16,10 +16,10 @@ Conway::~Conway()
 {
 	for (int i = 0; i < side; i++)
     {
-        delete universe[i];
+        delete [] universe[i];
     }
-    delete universe;
-    universe = NULL;// Your code here!
+    delete []universe;
+// Your code here!
 }
 
 void Conway::start() {
