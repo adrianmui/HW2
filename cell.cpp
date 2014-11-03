@@ -32,7 +32,7 @@ Cell::Cell(bool a, RGBAPixel c)
 
 int Cell::random()
 {
-    srant(time(NULL));
+    srand(time(NULL));
     return int(rand()%256);
 }
 
