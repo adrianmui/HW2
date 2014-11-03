@@ -19,7 +19,7 @@ Conway::~Conway()
         
         for (int i = 0; i < side; i++)
         {
-            delete [] universe[i];
+            delete universe[i];
         }
     }
     delete [] universe;
@@ -41,15 +41,14 @@ int Conway::count_alive_neighbors(int x, int y)
     {
         for (int j = -1; j <= 1; j++)
         {
-            if (i == 0 && j == 0)
-            {
-                continue;
-            }
             int grid_x = (i+x+side)%side;
             int grid_y= (j+y+side)%side;
             if ((universe[grid_x][grid_y].get_alive()) == true)
             {
-                count++;
+                if ((i != x) && (j != y)) // excludes center
+                {
+                    count++;
+                }
             }
         }
     }
