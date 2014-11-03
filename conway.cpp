@@ -15,7 +15,8 @@ Conway::~Conway()
     {
         delete universe[i];
     }
-    delete universe;// Your code here!
+    delete universe;
+    universe = NULL;// Your code here!
 }
 
 void Conway::start() {
@@ -35,7 +36,7 @@ int Conway::count_alive_neighbors(int x, int y)
         {
             if ((universe[i][j].get_alive()) == true)
             {
-                if ((i != x) && (j != y)) // excludes center
+                if ((i == x) && (j == y)) // excludes center
                 {
                     count++;
                 }
