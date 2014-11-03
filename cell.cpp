@@ -39,11 +39,11 @@ void Cell::set_alive(bool a)
     }// Your code here!
 }
 
-RGBAPixel get_color() {
+RGBAPixel Cell::get_color() {
 	return color; // Your code here!
 }
 
-void set_color(RGBAPixel c) {
+void Cell::set_color(RGBAPixel c) {
     color.blue = c.blue;
     color.red = c.red;
     color.alpha = c.alpha;
