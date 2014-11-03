@@ -3,6 +3,8 @@
 #include "rgbapixel.h"
 #include "animation.h"
 #include "png.h"
+#include <stdlib.h>
+#include <time.h>
 using namespace std;
 
 Conway::Conway(int s) {

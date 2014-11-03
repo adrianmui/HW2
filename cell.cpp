@@ -1,11 +1,18 @@
 #include "cell.h"
 #include "rgbapixel.h"
 #include <stdlib.h>     /* srand, rand */
+#include <time.h>
 using namespace std;
 
 Cell::Cell()
 {
-    alive = true;
+	if ((rand() %100+1) <= 50)
+    {
+        alive = true;
+    }
+    else {
+        alive = false;
+    }
     color.blue = 255;
     color.red = 255;
     color.alpha = 255;
