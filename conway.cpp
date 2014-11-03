@@ -7,7 +7,9 @@ using namespace std;
 
 Conway::Conway(int s) {
 	side = s;// Your code here!
-
+    Cell** universe = new Cell*[side];
+    for(int i = 0; i < side; i++)
+        universe[i] = new Cell[side];
 }
 
 Conway::~Conway()
@@ -35,12 +37,12 @@ void Conway::step() {
 int Conway::count_alive_neighbors(int x, int y)
 {
 	int count = 0;
-    for (int i = (x-1); i == (x+1); i++)
+    for (int i = -1; i <= 1; i++)
     {
-        for (int j = (y-1); j == (y+1); j++)
+        for (int j = -1; j <= 1; j++)
         {
-            int grid_x = (i+side)%side;
-            int grid_y= (j+side)%side;
+            int grid_x = (i+x+side)%side;
+            int grid_y= (j+y+side)%side;
             if ((universe[grid_x][grid_y].get_alive()) == true)
             {
                 if ((i != x) && (j != y)) // excludes center
