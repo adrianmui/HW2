@@ -5,7 +5,7 @@ using namespace std;
 
 Cell::Cell()
 {
-	if ((rand() %100+1) % 2)
+	if ((rand() %100+1) <= 50)
     {
         alive = true;
     }
