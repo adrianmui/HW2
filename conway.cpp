@@ -41,7 +41,9 @@ int Conway::count_alive_neighbors(int x, int y)
     {
         for (int j = (y-1); j == (y+1); j++)
         {
-            if ((universe[i][j].get_alive()) == true)
+            int grid_x = (i+side)%side;
+            int grid_y= ji+side)%side;
+            if ((universe[grid_x][grid_y].get_alive()) == true)
             {
                 if ((i != x) && (j != y)) // excludes center
                 {
