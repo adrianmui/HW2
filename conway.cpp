@@ -13,11 +13,9 @@ Conway::~Conway()
 {
 	for (int i = 0; i < side; i++)
     {
-        for (int j = 0; j < side; j++)
-        {
-            delete universe[i][j];
-        }
+        delete universe[i];
     }
+    delete universe;
     universe = NULL;// Your code here!
 }
 
@@ -29,7 +27,7 @@ void Conway::step() {
 	// For HW3
 }
 
-int count_alive_neighbors(int x, int y)
+int Conway::count_alive_neighbors(int x, int y)
 {
 	int count = 0;
     for (int i = (x-1); i <= (x+1); i++)
