@@ -5,13 +5,7 @@ using namespace std;
 
 Cell::Cell()
 {
-	if ((rand() %100+1) <= 50)
-    {
-        alive = true;
-    }
-    else {
-        alive = false;
-    }
+    alive = true;
     color.blue = 255;
     color.red = 255;
     color.alpha = 255;
