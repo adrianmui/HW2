@@ -12,13 +12,20 @@ Cell::Cell()
     else {
         alive = false;
     }
-    color = 0;// Your code here!
+    color.blue = 255;
+    color.red = 255;
+    color.alpha = 255;
+    color.green = 255;
+    // Your code here!
 }
 
 Cell::Cell(bool a, RGBAPixel c)
 {
     alive = a;// Your code here!
-    color = c;
+    color.blue = c.blue;
+    color.red = c.red;
+    color.alpha = c.alpha;
+    color.green = c.green;
 }
 
 bool Cell::get_alive()
@@ -37,5 +44,9 @@ RGBAPixel get_color() {
 }
 
 void set_color(RGBAPixel c) {
-	color = c;
+    color.blue = c.blue;
+    color.red = c.red;
+    color.alpha = c.alpha;
+    color.green = c.green;
+
 }
