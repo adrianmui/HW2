@@ -11,11 +11,11 @@ Conway::Conway(int s) {
 
 Conway::~Conway()
 {
-	for (int i = 0; i < side.length()-1; i++)
+	for (int i = 0; i < side; i++)
     {
-        for (int j = 0; j < side.length()-1; j++)
+        for (int j = 0; j < side; j++)
         {
-            delete [i][j]universe;
+            delete universe[i][j];
         }
     }
     universe = NULL;// Your code here!
@@ -31,14 +31,14 @@ void Conway::step() {
 
 int count_alive_neighbors(int x, int y)
 {
-	int * count = 0;
+	int count = 0;
     for (int i = (x-1); i <= (x+1); i++)
     {
         for (int j = (y-1); y<= (y+1); j++)
         {
-            if ([i][j]universe.get_alive() == true)
+            if ((universe[i][j].get_alive()) == true)
             {
-                if ((i != x) && (j != y))
+                if ((i != x) && (j != y)) // excludes center
                 {
                     count++;
                 }
