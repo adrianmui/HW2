@@ -7,7 +7,7 @@ using namespace std;
 
 Conway::Conway(int s) {
 	side = s;// Your code here!
-    Cell ** [side][side]universe;
+    Cell ** universe[s][s];
 }
 
 Conway::~Conway()
