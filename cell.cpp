@@ -13,10 +13,10 @@ Cell::Cell()
     else {
         alive = false;
     }
-    color.blue = random();
-    color.red = random();
-    color.alpha = random();
-    color.green = 255;
+    color.blue = int(rand()%256);
+    color.red = int(rand()%256);
+    color.alpha = int(rand()%256);
+    color.green = int(rand()%256);
     // Your code here!
 }
 
@@ -28,12 +28,6 @@ Cell::Cell(bool a, RGBAPixel c)
     color.red = c.red;
     color.alpha = c.alpha;
     color.green = c.green;
-}
-
-int Cell::random()
-{
-    srand(time(NULL));
-    return int(rand()%256);
 }
 
 bool Cell::get_alive()
