@@ -20,7 +20,7 @@ Conway::~Conway()
         {
             for (int j=0; j < side; j++)
             {
-                delete universe[i][j];
+                delete [] universe[i][j];
             }
             delete universe[i];
         }
