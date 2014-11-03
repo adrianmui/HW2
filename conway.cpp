@@ -14,15 +14,18 @@ Conway::Conway(int s) {
 
 Conway::~Conway()
 {
-    if (universe !=NULL)
+    if (universe != NULL)
     {
-        
-        for (int i = 0; i < side; i++)
+        for (int i=0; i< side; i++)
         {
-            delete [] universe[i];
+            for (int j=0; j < side; j++)
+            {
+                delete universe[i][j];
+            }
+            delete universe[i];
         }
     }
-    delete [] universe;
+    delete universe;
 // Your code here!
 }
 
