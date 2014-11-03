@@ -30,9 +30,9 @@ void Conway::step() {
 int Conway::count_alive_neighbors(int x, int y)
 {
 	int count = 0;
-    for (int i = (x-1); i <= (x+1); i++)
+    for (int i = (x-1); i =(x+1); i++)
     {
-        for (int j = (y-1); y<= (y+1); j++)
+        for (int j = (y-1); y=(y+1); j++)
         {
             if ((universe[i][j].get_alive()) == true)
             {
